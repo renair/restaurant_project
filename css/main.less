@@ -1,7 +1,9 @@
 @body:#202020;
+@big-text:35px;
+@content-text:20px;
 
 body {
-    background-color: lighten(@body,10%);
+    background-color: lighten(@body,7%);
 }
 
 .hide {
@@ -15,7 +17,49 @@ body {
         color: whitesmoke;
     }
     
+    .content-text {
+        font-size: @content-text;
+        text-align: justify;
+        padding: 13px;
+    }
+    
+    .header-text {
+        text-align: center;
+        font-size: @big-text;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
     #map {
         height: 75vh;
+    }
+}
+
+.flexible-images {
+    margin-top: 0;
+    
+    .flexi-img {
+        overflow: hidden;
+        border: none;
+        
+        .img-left {
+            float: left;
+            margin-right: 20px;
+        }
+        
+        .img-right {
+            float: right;
+            margin-left: 20px;
+        }
+        
+        img {
+            height: 100vh;
+            width: 100%;
+            transition: all 1s ease;
+            
+            &:hover {
+                transform: scale(1.5,1.5);
+            }
+        }
     }
 }
