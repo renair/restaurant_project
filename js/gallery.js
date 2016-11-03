@@ -10,20 +10,23 @@ $(document).ready(function(){
     
     //load image to main image
     $(".gallery-image").click(function() {
-        MAIN_IMAGE.attr("src", $(this).attr("src"));
+        MAIN_IMAGE.attr("src", $(this).attr("src").replace("small","big"));
+        $('html, body').animate({scrollTop: 0},500);
     })
 
     //scroll left
     $(".main-image  .scroll-left").click(function() {
         CURRENT_IMAGE = CURRENT_IMAGE - 1 < 0 ? IMAGE_LIST.length - 1 : CURRENT_IMAGE - 1 ;
-        MAIN_IMAGE.attr("src", IMAGE_LIST[CURRENT_IMAGE]);
+        var name = IMAGE_LIST[CURRENT_IMAGE].replace("small","big");
+        MAIN_IMAGE.attr("src", name);
         console.log(CURRENT_IMAGE);
     });
     
     //scroll right
     $(".main-image .scroll-right").click(function() {
         CURRENT_IMAGE = (CURRENT_IMAGE + 1) % IMAGE_LIST.length;
-        MAIN_IMAGE.attr("src", IMAGE_LIST[CURRENT_IMAGE]);
+        var name = IMAGE_LIST[CURRENT_IMAGE].replace("small","big");
+        MAIN_IMAGE.attr("src", name);
         console.log(CURRENT_IMAGE);
     });
 });
