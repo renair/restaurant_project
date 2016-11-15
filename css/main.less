@@ -10,6 +10,14 @@ body {
     display: none;
 }
 
+.email-valid {
+    background-color: greenyellow;
+}
+
+.email-invalid {
+    background-color: red;
+}
+
 .main-content {
     margin-top: 30px;
     
@@ -157,6 +165,43 @@ body {
             &:hover {
                 transform: scale(1.5,1.5);
             }
+        }
+    }
+}
+
+.comment {
+    margin-top: 40px;
+    
+    .comment-text {
+        border: 1px solid grey;
+        border-radius: 5px;
+        resize: none;
+        height: 150px;
+        width: 100%;
+        font-size: 17px;
+        box-sizing: border-box;
+    }
+}
+
+#comentbox > .comment-row {
+    .info {
+        color: grey;
+        
+        .name{
+            font-size: 20px;
+        }
+        
+        .date {
+            font-size: 14px;
+            display: inline-block;
+            padding-left: 20px;
+            font-weight: 600;
+        }
+        
+        .user-mark{
+            font-size: 23px;
+            display: inline-block;
+            padding-left: 20px;
         }
     }
 }

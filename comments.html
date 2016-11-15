@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet/less" type="text/css" href="css/main.less">
+		<link href="http://social.unian.net/css/flags.css" rel="stylesheet"  type="text/css">
+		<script src="js/less-2.7.1.js"></script>
+	</head>
+	<body>
+		<header id="menu">
+            <!-- Hear will be menue -->
+        </header>
+		<div class="container main-content">
+            <div class="comment">
+                <div class="row well">
+                    <div class="col-sm-12">
+                        <div class="well">
+                            <div class="input-group">
+                              <input type="text" class="form-control user-name" aria-label="..." placeholder="Ваше ім'я">
+                              <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Залишити коментар<span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                          <li><a href="#" id="coment-withmane">З ім'ям</a></li>
+                                          <li><a href="#" id="coment-anonymous">Анонімно</a></li>
+                                    </ul>
+                              </div>
+                            </div>
+                            <span>Ваша оцінка:</span>
+                            <input name="mark" type="radio" value="0">0
+                            <input name="mark" type="radio" value="1">1
+                            <input name="mark" type="radio" value="2">2
+                            <input name="mark" type="radio" value="3">3
+                            <input name="mark" type="radio" value="4">4
+                            <input name="mark" type="radio" value="5">5
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <textarea class="comment-text" draggable="false" placeholder="Ваш коментар..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="comentbox">
+                
+            </div>
+            <div class="btn-group comment-ch">
+                <button class="btn btn-default page-ch">1</button>
+                <button class="btn btn-default page-ch">2</button>
+                <button class="btn btn-default page-ch">3</button>
+                <button class="btn btn-default page-ch">4</button>
+                <button class="btn btn-default page-ch">5</button>
+            </div>
+        </div>
+		<script src="js/jquery-2.2.4-min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/comments.js"></script>
+	</body>
+</html>
