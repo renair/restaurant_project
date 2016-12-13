@@ -111,10 +111,10 @@ Comments = [
 //default action whitch occure onload
 loadComments(Comments.slice(0,5));
 
-$(".page-ch").click(function(event){
+/*$(".page-ch").click(function(event){
     var num = +event.currentTarget.innerHTML - 1;
     loadComments(Comments.slice(num*5, (num+1)*5));
-});
+});*/
 
 $(".user-name").keyup(function(){
     var $node = $(".user-name");
@@ -141,5 +141,3 @@ $(".comment-text").keydown(function(event){
         alert("Not allowed more then 500 symbols.");
     }
 });
-$("").keyup(function(){});
-$("").keyup(function(){});

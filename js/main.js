@@ -1,5 +1,5 @@
 var $MENU = $("#menu");
-var EMAIL_REGEXP = /[\w.+\-!?/:#$%&*();|<>]{3,}@[a-z0-9]+\.[a-z0-9]+(\.?[a-z0-9]+)*/g;
+var EMAIL_REGEXP = /[\w.+\-!?/:#$%&*();|<>]{3,}@[a-z0-9]+\.[a-z0-9]+(\.?[a-z0-9]+)*/i;
 
 //load menue
 $.get("files/menu.htm",function(data){
