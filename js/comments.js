@@ -38,19 +38,19 @@ Comments = [
         user:"",
         date:"",
         mark:0,
-        text:"Comment #4"
+        text:"Coment #4"
     },
     {
         user:"",
         date:"",
         mark:0,
-        text:"Comment #5"
+        text:"Coment #5"
     },
     {
         user:"",
         date:"",
         mark:0,
-        text:"Comment #6"
+        text:"Coment #6"
     },
     {
         user:"",
@@ -109,7 +109,7 @@ Comments = [
 ];
 
 //default action whitch occure onload
-loadComments(Comments.slice(0,5));
+loadComments(Comments.slice(0,10));
 
 /*$(".page-ch").click(function(event){
     var num = +event.currentTarget.innerHTML - 1;
@@ -132,6 +132,7 @@ $(".user-name").keyup(function(){
         $node.addClass("email-invalid");
     }
 });
+
 $(".comment-text").keydown(function(event){
     var $node = $(".comment-text");
     var text = $node.val();
@@ -140,4 +141,15 @@ $(".comment-text").keydown(function(event){
         $node.val(text.slice(0,499));
         alert("Not allowed more then 500 symbols.");
     }
+});
+
+$("#find-comment").click(function(){
+    var res = [];
+    var text = $("#comment-text").val();
+    for(var i = 0; i < Comments.length;++i){
+        if(Comments[i].text.includes(text)){
+            res.push(Comments[i]);
+        }
+    }
+    loadComments(res);
 });
